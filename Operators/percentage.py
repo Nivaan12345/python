@@ -6,3 +6,4 @@ Maths=int(input("Enter your marks of Maths"))
 sum=Maths+History+Science+English
 percentage=(sum/400)*100
 print("your Percentage is",percentage)
+#end

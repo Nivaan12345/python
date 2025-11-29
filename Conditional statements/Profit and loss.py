@@ -6,3 +6,4 @@ if(cost<sell):
 else:
     loss=int(cost-sell)
     print("you have made a loss of Rupees",loss)
+#end

@@ -6,3 +6,4 @@ print("the number is",type(number))
 print("My age is",type(age))
 print("the flag is",type(flag))
 print("My name is",type(name))
+#end
