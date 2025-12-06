@@ -13,3 +13,4 @@ elif(avg<=75 and avg>=50):
 else:
     x=("A")
 print("You have got grade",x,"with a percentage of",avg,"%")
+#end
