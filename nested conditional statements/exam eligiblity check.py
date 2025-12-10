@@ -7,3 +7,4 @@ if(medical=='N'):
         print("You are allowed in the exam")
 else:
     print("You are allowed in the exam")
+#end
