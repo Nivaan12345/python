@@ -1,6 +1,6 @@
-p=str(input("what is the password to open this encrypted file "))
+p=str(input("What is the password to open this encrypted file "))
 if(p==str("love you" or "Love you")):
-    turf=int(input("enter the price for turf per sq.ft "))
+    turf=int(input("Enter the price for turf per sq.ft "))
     sq=int(input("Enter the amount of sq.ft you want to turf "))
     tusq=(turf*sq)
     ext=int(input("Add the amount of any extra charges per sq.ft "))
