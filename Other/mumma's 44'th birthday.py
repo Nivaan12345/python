@@ -3,7 +3,7 @@ if(p==str("love you" or "Love you")):
     turf=int(input("enter the price for turf per sq.ft "))
     sq=int(input("Enter the amount of sq.ft you want to turf "))
     tusq=(turf*sq)
-    ext=int(input("Add the amount of any extra charges "))
+    ext=int(input("Add the amount of any extra charges per sq.ft "))
     esqt=(ext*sq)
     tsqe=(tusq+esqt)
     gst=int(input("Enter the percentage of gst applied "))
