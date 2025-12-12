@@ -8,3 +8,4 @@ if(type(y)is not float):
     print("True")
 else:
     print("False")
+    #end

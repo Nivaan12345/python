@@ -6,3 +6,4 @@ a=b
 b=c
 c=temp
 print("a,b and c are now",a,",",b,",",c)
+#end
