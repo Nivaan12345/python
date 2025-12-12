@@ -11,9 +11,9 @@ if(choice==1):
         print("Invalid choice, please try again")
 elif(choice==2):
     print("You have selected bike")
-    bike=int(input("Would you want a Scooter or a Bike(1 for bike and 2 for scooter) "))
+    bike=int(input("Would you want a Scooter or a Scootie(1 for scootie and 2 for scooter) "))
     if(bike==1):
-        print("We have arranged a bike for your ride")
+        print("We have arranged a scootie for your ride")
     elif(bike==2):
         print("we have arranged a scooter for your ride")
     else:
