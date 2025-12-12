@@ -12,5 +12,5 @@ elif(avg<=75 and avg>=50):
     x=("B")
 else:
     x=("A")
-print("You have got grade",x,"with a percentage of",avg,"%")
+print("You have got grade",x,"with a percentage of",int(avg),"%")
 #end
