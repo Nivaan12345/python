@@ -7,4 +7,4 @@ elif(units>100 and units<200):
     x=((units*5.26)+45)
 else:
     x=((units*8.45)+75)
-print("You have to pay rupees",x,"for your electricity bill if you have",units,"units")
+print("You have to pay rupees",x,"for your electricity bill, if you have",units,"units")
