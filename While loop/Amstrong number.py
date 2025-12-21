@@ -9,3 +9,4 @@ if(sum==num):
     print("This is an amstrong number")
 else:
     print("This is not an amstrong number")
+print(2/10)
