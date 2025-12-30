@@ -5,3 +5,4 @@ for i in range(1,rows+1,1):
         print(num,end='')
         num=num+1
     print()
+#end

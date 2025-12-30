@@ -3,3 +3,4 @@ ast='*'
 while ast<='*'*n:
     print(ast)
     ast=ast+'*'
+#end
