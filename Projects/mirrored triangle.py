@@ -1,5 +1,6 @@
-ast='*****'
-while ast>='*':
+x=int(input("number of rows "))
+for i in range(x+1):
+    ast='*'*x
     print(ast)
-    ast=ast-'*'
+    x=x-1
 #end
