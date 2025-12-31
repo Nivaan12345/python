@@ -7,6 +7,6 @@ polygon=turtle.Turtle()
 angle=360/6
 for i in range(1,7,1):
     polygon.forward(50)
-    time.sleep(2)
+    time.sleep(0.25)
     polygon.right(angle)
 turtle.done()
