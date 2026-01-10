@@ -13,3 +13,4 @@ elif(avg<=75 and avg>=50):
     print("You have got B grade with a percentage of",int(per),"%")
 else:
     print("You have got A grade with a percentage of",int(per),"%")
+#end

@@ -4,3 +4,4 @@ def total_calc(bill,tip_perc):
     total=(((tip_perc/100)*bill)+bill)
     print("The total amount you have to pay is Rupees",total)
 total_calc(bill,tip_perc)
+#end

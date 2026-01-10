@@ -7,3 +7,4 @@ for i in range(4):
     star.forward(100)
     star.right(144)
 star.forward(100)
+#end

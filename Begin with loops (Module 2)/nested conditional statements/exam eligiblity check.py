@@ -9,4 +9,4 @@ elif(medical==str('y' or 'Y')):
     print("You are allowed in the exam")
 else:
     print("Invalid, please try again")
-#en
+#end
