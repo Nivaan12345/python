@@ -5,3 +5,4 @@ y=random.random()
 print(y)
 z=random.choice('Alphabet')
 print(z)
+#end

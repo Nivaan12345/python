@@ -5,3 +5,4 @@ for i in x:
         break
     else:
         print("There is no a in your word")
+        #end
