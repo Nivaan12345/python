@@ -6,7 +6,7 @@ odd=[]
 temp1=''
 def square(x,y,temp1,list1):
     for i in range(x,y+1):
-        temp1=x*x
+        temp1=i**2
         list.insert(list1,i+1,temp1)
     for j in list1:
         if j%2==0:
