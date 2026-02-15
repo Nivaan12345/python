@@ -3,3 +3,4 @@ x['Home']=9867333557
 print(x['Pooja'])
 x.pop('Neil')
 print(x)
+#end
