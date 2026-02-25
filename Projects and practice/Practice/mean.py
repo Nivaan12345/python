@@ -8,3 +8,4 @@ for i in x:
     y=y+i
 z=y/l
 print("The mean of your numbers is",z)
+#end
