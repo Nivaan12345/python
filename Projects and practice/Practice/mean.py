@@ -1,7 +1,7 @@
 l=int(input("Enter the amount of numbers you want to add "))
 x=[]
 for m in range(l):
-    temp=int(input("Enter num",m," "))
+    temp=int(input("Enter num "))
     x.append(temp)
 y=0
 for i in x:
