@@ -6,6 +6,6 @@ for m in range(n):
 y=0
 for i in x:
     y=y+i
-z=y/l
+z=y/n
 print("The mean of your numbers is",z)
 #end
