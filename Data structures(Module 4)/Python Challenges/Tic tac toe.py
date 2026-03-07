@@ -4,9 +4,9 @@
     keys=location 
     initially will be empty space
     value will change while play'''
-the_board={7:' ',8:' ',9:' ',
-           4:' ',5:' ',6:' ',
-           1:' ',2:' ',3:' '}
+the_board={'7':' ','8':' ','9':' ',
+           '4':' ','5':' ','6':' ',
+           '1':' ','2':' ','3':' '}
 board_keys=[]
 for key in the_board:
     board_keys.append(key)
@@ -39,42 +39,42 @@ def game():
             if the_board['7']==the_board['8']==the_board['9'] !=' ':
                 printboard(the_board)
                 print("\nGame over\n")
-                print("****"+turn+"won.****")
+                print("****"+turn+" won.****")
                 break
             elif the_board['4']==the_board['5']==the_board['6'] !=' ':
                 printboard(the_board)
                 print("\nGame over\n")
-                print("****"+turn+"won.****")
+                print("****"+turn+" won.****")
                 break
             elif the_board['1']==the_board['2']==the_board['3'] !=' ':
                 printboard(the_board)
                 print("\nGame over\n")
-                print("****"+turn+"won.****")
+                print("****"+turn+" won.****")
                 break
             elif the_board['1']==the_board['4']==the_board['7'] !=' ':
                 printboard(the_board)
                 print("\nGame over\n")
-                print("****"+turn+"won.****")
+                print("****"+turn+" won.****")
                 break
             elif the_board['2']==the_board['5']==the_board['8'] !=' ':
                 printboard(the_board)
                 print("\nGame over\n")
-                print("****"+turn+"won.****")
+                print("****"+turn+" won.****")
                 break
             elif the_board['3']==the_board['6']==the_board['9'] !=' ':
                 printboard(the_board)
                 print("\nGame over\n")
-                print("****"+turn+"won.****")
+                print("****"+turn+" won.****")
                 break
             elif the_board['7']==the_board['5']==the_board['3'] !=' ':
                 printboard(the_board)
                 print("\nGame over\n")
-                print("****"+turn+"won.****")
+                print("****"+turn+" won.****")
                 break
             elif the_board['1']==the_board['5']==the_board['9'] !=' ':
                 printboard(the_board)
                 print("\nGame over\n")
-                print("****"+turn+"won.****")
+                print("****"+turn+" won.****")
                 break
 
         if count==9:
@@ -83,6 +83,8 @@ def game():
 
         if turn=='X':
             turn='O'
+        else:
+            turn='X'
 
     restart=(input("Do you want to play again?(Y/N)"))
     if restart=='Y'or restart=='y':
