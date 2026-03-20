@@ -1,5 +1,5 @@
 x=int(input("number of rows "))
-for i in range(x+1):
+while x==0:
     ast='*'*x
     print(ast)
     x=x-1
