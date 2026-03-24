@@ -45,15 +45,19 @@ hangman=random.choice(x)
 hangman.lower
 answer=""
 for i in range(len(hangman)+1):
-    answer=answer+"-"
+    if i !=" ":
+        answer=answer+"-"
+    else:
+        answer=answer+"\n"
 lives=7
 while True:
     if lives==0:
         print("You have no lives left")
         break
     y=input("Enter the letter ")
-    f=hangman.index(y)
+
     if y in hangman:
+        f=int(hangman.index(y))
         print(hangman)
         print(f"the letter {y} is in the answer")
         answer[f]=y
