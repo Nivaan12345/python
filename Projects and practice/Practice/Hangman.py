@@ -64,5 +64,5 @@ while True:
         print(f"You have {lives} lives left")
         if answer==hangman:
             print("--------congratulations------------")
-            print("You have won\nThe answer was",word)
+            print("You have won\nThe answer was",hangman)
 
