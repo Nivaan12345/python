@@ -51,9 +51,10 @@ while True:
         print("You have no lives left")
         break
     y=input("Enter the letter ")
-    if y or y.upper in (hangman):
+    if y in hangman:
+        print(hangman)
         print("--------congratulations------------")
         print(f"the letter {y} is in the answer")
-        l=hangman(enumerate(y))
-        answer[l]=y
+        indexer=hangman.index(y)
+        answer[indexer]=y
         print(answer)
