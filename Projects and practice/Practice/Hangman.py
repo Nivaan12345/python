@@ -46,9 +46,12 @@ answer=""
 for i in range(len(hangman)+1):
     answer=answer+"-"
 lives=7
-while lives==0:
+while True:
+    if lives==0:
+        print("You have no lives left")
+        break
     y=input("Enter the letter ")
-    if y or y.upper in hangman:
+    if y or y.upper in (hangman):
         print("--------congratulations------------")
         print(f"the letter {y} is in the answer")
         l=hangman(enumerate(y))
