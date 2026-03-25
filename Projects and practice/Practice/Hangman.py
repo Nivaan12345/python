@@ -42,7 +42,7 @@ else:
 
 import random
 hangman=random.choice(x)
-hangman.lower
+hangman.lower()
 answer=""
 for i in range(len(hangman)+1):
     if i !=" ":
@@ -58,7 +58,7 @@ while True:
 
     if y in hangman:
         f=int(hangman.index(y))
-        print(hangman)
+        hangman=hangman-y
         print(f"the letter {y} is in the answer")
         answer[f]=y
         print(answer)
@@ -68,4 +68,4 @@ while True:
         print(f"You have {lives} lives left")
         if answer==hangman:
             print("--------congratulations------------")
-            print("You have won\nThe answer was",hangman)
+            print("You have won\nThe answer was",answer)
