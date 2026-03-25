@@ -58,9 +58,8 @@ while True:
 
     if y in hangman:
         f=int(hangman.index(y))
-        hangman=hangman-y
         print(f"the letter {y} is in the answer")
-        answer[f]=y
+        
         print(answer)
     else:
         print("The letter",y,"is not in the answer")
