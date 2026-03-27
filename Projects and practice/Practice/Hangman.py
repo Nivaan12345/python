@@ -43,24 +43,23 @@ else:
 import random
 hangman=random.choice(x)
 hangman.lower()
-answer=""
+answer=[]
 for i in range(len(hangman)+1):
-    if i !=" ":
-        answer=answer+"-"
-    else:
-        answer=answer+"\n"
+    answer.append("-")
 lives=7
 while True:
     if lives==0:
         print("You have no lives left")
         break
-    y=input("Enter the letter ")
+    y=input("Enter the letter(including a space) ")
 
     if y in hangman:
         f=int(hangman.index(y))
         print(f"the letter {y} is in the answer")
-        
-        print(answer)
+        answer[f]=y
+        for i in range(len(hangman)+1):
+            temp=temp+answer[i]
+        print(temp)
     else:
         print("The letter",y,"is not in the answer")
         lives=lives-1
