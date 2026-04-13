@@ -15,6 +15,7 @@ class flashcards:
                 continue
             elif x=="N" or "n":
                 break
+            #PROBLEM NOT BREAKING THE WHILE LOOP
             else:
                 print("please try again")
             r=x+1
