@@ -4,7 +4,7 @@ pygame.init()
 
 screen=pygame.display.set_mode((400,500))
 
-img=pygame.image.load("pickleball.jpg")
+img=pygame.image.load("xxx.jpg")
 img=pygame.transform.scale(img,(300,300))
 done=False
 
