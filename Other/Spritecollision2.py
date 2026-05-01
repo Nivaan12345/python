@@ -9,8 +9,6 @@ FONT_SIZE=72
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
 background_path = os.path.join(script_dir, "background.jpg")
-print("background_path:", background_path)
-print("background exists:", os.path.exists(background_path))
 if os.path.exists(background_path):
     try:
         background_image = pygame.transform.scale(
