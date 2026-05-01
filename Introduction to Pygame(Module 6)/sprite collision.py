@@ -17,17 +17,17 @@ class Sprite(pygame.sprite.Sprite):
         super().__init__()
         self.image=pygame.Surface([width, height])
         self.image.fill(
-            pygame.color(('dodgerblue')))
+            pygame.Color('dodgerblue'))
         pygame.draw.rect(self.image,color,pygame.Rect(0,0,width,height))
         self.rect=self.image.get_rect()
 
     def move(self,x_change,y_change):
         self.rect.x=max(
-            min(self.rect.x+x_change + SCREEN_WIDTH - self.rect.width) ,0)
+            min(self.rect.x+x_change, SCREEN_WIDTH - self.rect.width) ,0)
         self.rect.y=max(
-            min(self.rect.y+y_change + SCREEN_WIDTH - self.rect.width) ,0)
+            min(self.rect.y+y_change, SCREEN_HEIGHT - self.rect.height) ,0)
         
-screen=pygame.display.set_mode()
+screen=pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 pygame.display.set_caption("Sprite collision")
 all_sprites=pygame.sprite.Group()
 
@@ -54,8 +54,8 @@ while running:
 
     if not won:
        keys=pygame.key.get_pressed()
-       x_change=(keys[pygame.K_RIGHT] -keys[pygame.k_LEFT])*MOVEMENT_SPEED
-       y_change=(keys[pygame.K_DOWN] -keys[pygame.k_UP])*MOVEMENT_SPEED
+       x_change=(keys[pygame.K_RIGHT] -keys[pygame.K_LEFT])*MOVEMENT_SPEED
+       y_change=(keys[pygame.K_DOWN] -keys[pygame.K_UP])*MOVEMENT_SPEED
        sprite1.move(x_change, y_change)
 
        if sprite1.rect.colliderect(sprite2.rect):
