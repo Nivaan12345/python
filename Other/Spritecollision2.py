@@ -21,7 +21,7 @@ if os.path.exists(background_path):
         background_image.fill(pygame.Color('skyblue'))
 else:
     background_image = pygame.Surface((SCREEN_WIDTH, SCREEN_HEIGHT))
-    background_image.fill(pygame.Color('skyblue'))
+    background_image.fill(pygame.Color('darkgreen'))
 
 font=pygame.font.SysFont("Times New Roman", FONT_SIZE)
 
