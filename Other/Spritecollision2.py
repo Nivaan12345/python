@@ -9,11 +9,18 @@ FONT_SIZE=72
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
 background_path = os.path.join(script_dir, "background.jpg")
+print("background_path:", background_path)
+print("background exists:", os.path.exists(background_path))
 if os.path.exists(background_path):
-    background_image = pygame.transform.scale(
-        pygame.image.load(background_path),
-        (SCREEN_WIDTH, SCREEN_HEIGHT)
-    )
+    try:
+        background_image = pygame.transform.scale(
+            pygame.image.load(background_path),
+            (SCREEN_WIDTH, SCREEN_HEIGHT)
+        )
+    except Exception as e:
+        print("Failed to load background image:", e)
+        background_image = pygame.Surface((SCREEN_WIDTH, SCREEN_HEIGHT))
+        background_image.fill(pygame.Color('skyblue'))
 else:
     background_image = pygame.Surface((SCREEN_WIDTH, SCREEN_HEIGHT))
     background_image.fill(pygame.Color('skyblue'))
@@ -47,7 +54,7 @@ sprite1.rect.x, sprite1.rect.y=random.randint(
 all_sprites.add(sprite1)
 
 sprite2= Sprite(pygame.Color('red'),20, 30)
-sprite2.rect.x, sprite2.rect.y=random.randint(
+sprite1.rect.x, sprite2.rect.y=random.randint(
     0,SCREEN_WIDTH- sprite2.rect.width), random.randint(
         0,SCREEN_HEIGHT -sprite2.rect.height)
 all_sprites.add(sprite2)
