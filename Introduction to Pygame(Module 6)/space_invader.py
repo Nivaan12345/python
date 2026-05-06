@@ -1,3 +1,4 @@
+import os
 import math
 import pygame
 import random
@@ -21,7 +22,7 @@ background=pygame.image.load('background.png')
 background=pygame.transform.scale(background,(800,500))
 
 playerImg=pygame.image.load('spaceship.png')
-background=pygame.transform.scale(playerImg,(100,100))
+playerImg=pygame.transform.scale(playerImg,(100,100))
 playerX=PLAYER_START_X
 playerY=PLAYER_START_Y
 playerX_change=0
@@ -36,7 +37,7 @@ num_of_enemies=6
 for _i in range(num_of_enemies):
     enemyImg.append(pygame.image.load('enemy.png'))
 
-    enemyX.append=(random.randint(0,SCREEN_WIDTH - 64))
+    enemyX.append(random.randint(0,SCREEN_WIDTH - 64))
     enemyY.append(random.randint(ENEMY_START_Y_MIN,ENEMY_START_Y_MAX))
     enemyX_change.append(ENEMY_SPEED_X)
     enemyY_change.append(ENEMY_SPEED_Y)
@@ -47,7 +48,7 @@ bulletImg=pygame.transform.scale(bulletImg,(50,50))
 bulletX=0
 bulletY=PLAYER_START_Y
 bulletx_change=0
-bullet_ychange=BULLET_SPEED_Y
+bullety_change=BULLET_SPEED_Y
 bullet_state="ready"
 
 score_value=0
@@ -66,7 +67,7 @@ def Game_over_text():
     screen.blit(over_text,(200,250))
 
 def player(x,y):
-    screen.blit(player.Img,(x,y))
+    screen.blit(playerImg,(x,y))
 
 def enemy(x,y,i):
     screen.blit(enemyImg[i],(x,y))
@@ -82,7 +83,7 @@ def isCollision(enemyX,enemyY,bulletX,bulletY):
 
 running=True
 while running:
-    screen.fill(0,0,0)
+    screen.fill((0,0,0))
     screen.blit(background,(0,0))
 
     for event in pygame.event.get():
@@ -125,7 +126,7 @@ while running:
         bullet_state="ready"
     elif bullet_state=="fire":
         fire_bullet(bulletX,bulletY)
-        bulletY-=bullet_ychange
+        bulletY-=bullety_change
     
     player(playerX,playerY)
     show_score(textX,textY)
