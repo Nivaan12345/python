@@ -45,7 +45,7 @@ all_sprites.add(sprite2)
 
 running,won=True,False
 clock=pygame.time.Clock()
-
+        
 while running:
     for event in pygame.event.get():
         if event.type==pygame.QUIT or (event.type== pygame.KEYDOWN
