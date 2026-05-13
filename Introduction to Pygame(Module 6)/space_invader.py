@@ -1,4 +1,3 @@
-import os
 import math
 import pygame
 import random
@@ -58,6 +57,9 @@ textY=10
 
 over_font=pygame.font.Font('freesansbold.ttf',64)
 
+game_over = False
+clock = pygame.time.Clock()
+
 def show_score(x,y):
     score=font.render("Score :"+ str(score_value),True,(255,255,255))
     screen.blit(score,(x,y))
@@ -96,10 +98,12 @@ while running:
                 playerX_change= 5
             if event.key==pygame.K_SPACE and bullet_state=="ready":
                  bulletX=playerX
+                 fire_bullet(bulletX,bulletY)
         if event.type==pygame.KEYUP and event.key in [pygame.K_LEFT and pygame.K_RIGHT]:
             playerX_change=0
         
-    playerX+=playerX_change
+    if not game_over:
+        playerX+=playerX_change
     playerX=max(0,min(playerX,SCREEN_WIDTH -64))
 
     for i in range(num_of_enemies):
@@ -119,15 +123,18 @@ while running:
             bullet_state="ready"
             score_value+=1
 
-        enemy(enemyX[i],enemyY[i],i)
+            enemy(enemyX[i],enemyY[i],i)
 
-    if bulletY<=0:
-        bulletY=PLAYER_START_Y
-        bullet_state="ready"
-    elif bullet_state=="fire":
-        fire_bullet(bulletX,bulletY)
-        bulletY-=bullety_change
+        if bulletY<=0:
+            bulletY=PLAYER_START_Y
+            bullet_state="ready"
+        elif bullet_state=="fire":
+            fire_bullet(bulletX,bulletY)
+            bulletY-=bullety_change
+    else:
+        Game_over_text()
     
     player(playerX,playerY)
     show_score(textX,textY)
     pygame.display.update()
+    clock.tick(60)
