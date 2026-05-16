@@ -4,6 +4,7 @@ pygame.init()
 scwi,sche=500,500
 screen=pygame.display.set_mode((scwi,sche))
 pygame.display.set_caption('custom event')
+screen.fill((255,255,255))
 SPRITE_COLOUR_CHANGE_EVENT=pygame.USEREVENT+2
 x,y=250,250
 spwi,sphe=60,60
@@ -15,13 +16,13 @@ class sprite(pygame.sprite.Sprite):
 
         super().__init__()
 
-    screen.fill((255,0,0))
+    
 def change_color(self):
     self.fill(pygame.Color("red"))
 
 sp1=pygame.draw.rect(screen,pygame.Color('darkgreen'),
                          (x,y,spwi,sphe))
-sp2=pygame.draw.rect(screen,pygame.Color('green'),
+sp2=pygame.draw.rect(screen,pygame.Color('blue'),
                          (400,400,spwi,sphe))
 
 
