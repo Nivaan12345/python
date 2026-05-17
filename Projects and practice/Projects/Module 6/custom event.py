@@ -16,15 +16,15 @@ class Sprite(pygame.sprite.Sprite):
         self.image=pygame.Surface([width,height])
         self.image.fill(color)
         self.image = pygame.Surface((50, 50)) 
-
+def colour_chaange(self):
+    self.fill(pygame.Color("red"))
 done=False
 while not done:
     for event in pygame.event.get():
         if event.type== pygame.QUIT:
                done=True
         elif event.type==SPRITE_COLOUR_CHANGE_EVENT:
-             sp1.image.fill(pygame.Color("red"))
-             (sp1.image.get_rect()).topleft=(100,10)
+             sp1.colour_change()
         pressed=pygame.key.get_pressed()
         if pressed[pygame.K_LEFT]: x -= 10
         if pressed[pygame.K_RIGHT]: x += 10
