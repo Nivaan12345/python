@@ -19,9 +19,10 @@ class Sprite(pygame.sprite.Sprite):
 
     def colour_change(self):
         self.image.fill(pygame.Color("red"))
-sp1 = Sprite(pygame.Color("darkgreen"), 60, 60)
+sp1=Sprite(pygame.Color("darkgreen"), 60, 60)
 sp2=Sprite(pygame.Color("darkblue"),60, 60)
 sp1.rect.topleft = (x, y)
+sp2.rect.topleft = (100, 100)
 
 done = False
 while not done:
@@ -43,7 +44,10 @@ while not done:
 
     if sp1.rect.bottom>=500 or sp1.rect.top<0 or sp1.rect.right>=500 or sp1.rect.left<0:
         pygame.event.post(pygame.event.Event(SPRITE_COLOUR_CHANGE_EVENT))
+    Back.fill((58,58,58))
+    Back.blit(sp1.image, sp1.rect)
+    Back.blit(sp2.image, sp2.rect)
     pygame.display.flip()
-clock.tick(90)
+    clock.tick(90)
 
 pygame.quit()
