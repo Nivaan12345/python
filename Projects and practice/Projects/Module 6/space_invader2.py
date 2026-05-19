@@ -83,7 +83,9 @@ def fire_bullet(x,y):
 def isCollision(enemyX,enemyY,bulletX,bulletY):
     distance= math.sqrt((enemyX-bulletX)**2+(enemyY-bulletY)**2)
     return distance< COLLISION_DISTANCE
-pygame.mixer_music.load('song.mp3')
+pygame.mixer.init()
+pygame.mixer.music.load('song.mp3')
+pygame.mixer.music.play(-1)
 running=True
 while running:
     screen.fill((0,0,0))
@@ -100,7 +102,7 @@ while running:
             if event.key==pygame.K_SPACE and bullet_state=="ready":
                  bulletX=playerX
                  fire_bullet(bulletX,bulletY)
-        if event.type==pygame.KEYUP and event.key in [pygame.K_LEFT and pygame.K_RIGHT]:
+        if event.type==pygame.KEYUP and event.key in [pygame.K_LEFT, pygame.K_RIGHT]:
             playerX_change=0
         
     if not game_over:
@@ -111,8 +113,8 @@ while running:
         if enemyY[i] >350:
             for j in range(num_of_enemies):
                 enemyY[j]=2000
-                Game_over_text()
-                break
+            game_over = True
+            break
 
         enemyX[i]+=enemyX_change[i]
         if enemyX[i]<=0 or enemyX[i] >= SCREEN_WIDTH -64:
@@ -124,7 +126,7 @@ while running:
             bullet_state="ready"
             score_value+=1
 
-            enemy(enemyX[i],enemyY[i],i)
+        enemy(enemyX[i],enemyY[i],i)
 
         if bulletY<=0:
             bulletY=PLAYER_START_Y
@@ -132,10 +134,13 @@ while running:
         elif bullet_state=="fire":
             fire_bullet(bulletX,bulletY)
             bulletY-=bullety_change
-    else:
+
+    if game_over:
         Game_over_text()
     
     player(playerX,playerY)
     show_score(textX,textY)
     pygame.display.update()
     clock.tick(60)
+pygame.mixer.music.stop()
+pygame.quit()
