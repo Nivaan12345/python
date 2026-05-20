@@ -136,11 +136,11 @@ while running:
             bulletY-=bullety_change
 
     if game_over:
+        pygame.mixer.music.stop()
         Game_over_text()
     
     player(playerX,playerY)
     show_score(textX,textY)
     pygame.display.update()
     clock.tick(60)
-pygame.mixer.music.stop()
 pygame.quit()
