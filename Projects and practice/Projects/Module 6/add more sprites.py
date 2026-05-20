@@ -5,7 +5,7 @@ screen=pygame.display.set_mode((500,500))
 pygame.display.set_caption("Add more sprites")
 score_value=0
 clock=pygame.time.Clock()
-screen.fill((58,58,58))
+screen.fill((0,255,0))
 x=250
 y=250
 
@@ -53,8 +53,9 @@ while not done:
     y=max(0,min(500-player.rect.height,y))
     player.update(x, y)
 
-    if pygame.sprite.spritecolliderect(player,enemyx):
-        score_value+=1
+
+    if pygame.sprite.collide_rect(player, enemyx):
+      score_value+=1
 
     enemyx.draw(screen)
     screen.blit(player.image, player.rect)
