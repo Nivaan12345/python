@@ -24,12 +24,8 @@ def divide():
 if choice==1:
     add()
 elif choice==2:
-    subtract
+    subtract()
 elif choice==3:
-    multiply
+    multiply()
 elif choice==4:
-    divide
-except ZeroDivisionError:
-    print("You cannot divide with a zero Try again")
-except ValueError:
-    print("Enter a number, not a letter or symbol")
+    divide()
