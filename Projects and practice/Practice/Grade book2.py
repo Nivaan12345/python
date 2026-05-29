@@ -14,7 +14,8 @@ while True:
 for key,value in student.items():
     avg=avg+value
 avg=avg/(len(student))
-print(f"The maximum score someone has got is {max(student.values())} \n The minimum score someone has got is {min(student.values())}")
+print(f"The maximum score someone has got is {max(student.values())}")
+print(f"The minimum score someone has got is {min(student.values())}")
 print("The average score is",round(avg,2))
 x=input("Enter the name of someone you want to look up ")
 try:
