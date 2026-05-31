@@ -1,4 +1,4 @@
-student={"Nivaan":96,"Bhadra":97,"Prithviraj":99,"Yurav":94,"Rivaan":85,"Jinaansh":90}
+student={"Nivaan":96,"Bhadra":97,"Prithviraj":99,"Yurav":94,"Rivaan":85,"Jinaansh":90,"Dhiya":80}
 avg=0
 while True:
     z=input("Do you want to register a name?(Y/N) ")
