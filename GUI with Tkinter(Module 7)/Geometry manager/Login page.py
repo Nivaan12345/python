@@ -15,8 +15,8 @@ password=Entry(frame,show="*")
 
 def display():
     nam=name.get()
-    greet=(f"hey {nam}")
-    mess="\n Congratulations for your new account!"
+    greet=(f"Hey {nam}")
+    mess="\nCongratulations for your new account!"
     txtbx.insert(END,greet)
     txtbx.insert(END,mess)
 
