@@ -10,7 +10,7 @@ while True:
         student[str(new)]=new2
     else:
         print("Please State yes or no with a capital Y or N")
-        exit()
+        pass
 for key,value in student.items():
     avg=avg+value
 avg=avg/(len(student))
