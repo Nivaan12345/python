@@ -5,12 +5,12 @@ class book:
         self.is_borrowed=False
     def borrow(self):
         self.is_borrowed=True
-        print("You have borrowed",self.title,)
+        print("You have borrowed",self.title,"by",self.author)
         if self.is_borrowed==True:
             print("You have successfully borrowed this book")
     def return_book(self):
         self.is_borrowed=False
-        print("You have returned",self.title)
+        print("You have returned",self.title,"by",self.author)
         if self.is_borrowed==False:
             print("You have successfully returned this book")
 
