@@ -37,7 +37,7 @@ def subtract():
     p1=int(entp1.get())
     p2=int(entp2.get())
     p3=p1-p2
-    mes="Welcome to Find the DifferencOe\n"
+    mes="Welcome to Find the Difference\n"
     pro=f"The number {p1} subtracted {p2} gives you {p3}\n"
     txt.insert(END,mes)
     txt.insert(END,pro)
