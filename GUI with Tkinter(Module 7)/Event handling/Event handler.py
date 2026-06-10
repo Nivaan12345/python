@@ -6,7 +6,7 @@ w.geometry("500x500")
 
 def event_keypress(event):
     print(event.char)
-w.bind("<key>",event_keypress)
+w.bind("<Key>",event_keypress)
 
 def event_click(event):
     print("This button has been clicked!")
