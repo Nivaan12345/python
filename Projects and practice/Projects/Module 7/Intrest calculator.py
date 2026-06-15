@@ -5,13 +5,13 @@ w.geometry("400x400")
 
 lbl1=Label(text="Enter the Principle",bg="#31E393",fg="#F54702")
 lbl2=Label(text="Enter the Time in years",bg="#31E393",fg="#F54702")
-lbl3=Label(text="Enter the Rate in decimal",bg="#31E393",fg="#F54702")
+lbl3=Label(text="Enter the Rate in percentage(no symbols)",bg="#31E393",fg="#F54702")
 p1=Entry()
 r1=Entry()
 t1=Entry()
 def simple_inrest():
     p=int(p1.get())
-    r=float(r1.get())
+    r=((int(r1.get()))/100)
     t=int(t1.get())
     i=p*r*t
     a=p*(1+(r*t))
@@ -19,7 +19,7 @@ def simple_inrest():
     txtbx.insert(END,mess)
 def compound_intrest():
     p=int(p1.get())
-    r=float(r1.get())
+    r=((int(r1.get()))/100)
     t=int(t1.get())
     a=p*((1+r)**t)
     i=a-p
