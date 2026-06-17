@@ -9,7 +9,7 @@ w.geometry("650x400")
 
 upload=Image.open("img1.png")
 upload=upload.resize((300,300))
-image=ImageTk.Photoimage(upload)
+image=ImageTk.PhotoImage(upload)
 label=Label(w,image=image,bg="light blue")
 label.place(x=180,y=20)
 
