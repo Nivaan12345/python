@@ -23,27 +23,22 @@ def Calc():
             if number==False:
                 r+=1
                 number=True
-                print("num")
         except ValueError:
             if i==i.upper():
                 if upper==False:
                     r+=1
                     upper=True
-                    print("upp")
             elif i==i.lower():
                 if lower==False:
                     r+=1
                     lower=True
-                    print("low")
         for j in symbols:
             if i==j:
                 if symbol==False:
                     r+=1
                     symbol=True
-                    print("sym")
     if len(pas)>=8:
         r+=1
-        print("len")
     
     if r<=1:
         res="Weak"
