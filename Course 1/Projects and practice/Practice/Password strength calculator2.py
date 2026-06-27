@@ -4,7 +4,7 @@ w.title("Password Strength Calculator")
 w.geometry("300x300")
 
 lbl1=Label(text="Enter your password",bg="light grey")
-ent1=Entry()
+ent1=Entry(show="*")
 def Calc():
     top=Toplevel()
     top.title("Calculator")
