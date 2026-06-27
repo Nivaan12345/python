@@ -1,4 +1,3 @@
-
 from tkinter import *
 w=Tk()
 w.title("Password Strength Calculator")
@@ -23,25 +22,24 @@ def Calc():
             if upper==False:
                r+=1
                upper=True
-               print("upper")
         elif i==i.lower():
             if lower==False:
                 r+=1
                 lower=True
-                print("lower")
-        elif type(i)==int:
+        try:
+            x=int(i)
             if number==False:
                 r+=1
                 number=True
-                print("number")
-        elif i in symbols:
-            if symbol==False:
-                r+=1
-                symbol=True
-                print("symbol")
+        except ValueError:
+            pass
+        for j in symbols:
+            if i==j:
+                if symbol==False:
+                    r+=1
+                    symbol=True
     if len(pas)>=8:
         r+=1
-        print("len")
     
     if r<=1:
         res="Weak"
