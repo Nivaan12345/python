@@ -56,9 +56,9 @@ def Calc():
     
     mess=(f"Your password is: {res}")
     txtbx.insert(END,mess)
-    lbl2=Label(top,text="  ",bg=(color))
+    lbl2=Label(top,text="        \n       ",bg=(color))
     txtbx.place(y=150)
-    lbl2.pack()
+    lbl2.place(x=150,y=100)
     top.mainloop()
 
 btn=Button(text="calculate",command=Calc,bg="light grey")
