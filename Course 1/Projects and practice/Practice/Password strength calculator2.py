@@ -1,7 +1,7 @@
 from tkinter import *
 w=Tk()
 w.title("Password Strength Calculator")
-w.geometry("300x300")
+w.geometry("500x500")
 
 lbl1=Label(text="Enter your password",bg="light grey")
 ent1=Entry(show="*")
@@ -25,25 +25,30 @@ def Calc():
                     r+=1
                     symbol=True
                     sym_upp=True
+                    print("symbol")
         try:
             x=int(i)
             if number==False:
                 r+=1
                 number=True
+                print("Numbers")
         except ValueError:
             if i==i.upper():
                 if upper==False:
                     if sym_upp==False:
                         r+=1
                         upper=True
+                        print("Upper case")
             elif i==i.lower():
                 if lower==False:
                     r+=1
                     lower=True
-
+                    
+                    print("Lower case")
     if len(pas)>=8:
         r+=1
-    
+        print("length")
+    print("\n--------------\n")
     if r<=1:
         res="Weak"
         color="red"
