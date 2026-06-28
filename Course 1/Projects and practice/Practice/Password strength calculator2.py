@@ -17,7 +17,14 @@ def Calc():
     number=False
     symbol=False
     pas=ent1.get()
+    sym_upp=False
     for i in pas:
+        for j in symbols:
+            if i==j:
+                if symbol==False:
+                    r+=1
+                    symbol=True
+                    sym_upp=True
         try:
             x=int(i)
             if number==False:
@@ -26,17 +33,14 @@ def Calc():
         except ValueError:
             if i==i.upper():
                 if upper==False:
-                    r+=1
-                    upper=True
+                    if sym_upp==False:
+                        r+=1
+                        upper=True
             elif i==i.lower():
                 if lower==False:
                     r+=1
                     lower=True
-        for j in symbols:
-            if i==j:
-                if symbol==False:
-                    r+=1
-                    symbol=True
+
     if len(pas)>=8:
         r+=1
     
