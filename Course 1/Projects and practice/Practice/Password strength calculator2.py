@@ -76,3 +76,4 @@ ent1.place(x=150,y=20)
 btn.place(x=130,y=110)
 
 w.mainloop()
+#end
