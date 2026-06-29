@@ -1,7 +1,7 @@
 from tkinter import *
 w=Tk()
 w.title("Password Strength Calculator")
-w.geometry("500x500")
+w.geometry("300x300")
 
 lbl1=Label(text="Enter your password",bg="light grey")
 ent1=Entry(show="*")
