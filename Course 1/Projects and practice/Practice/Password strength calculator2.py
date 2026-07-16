@@ -17,8 +17,8 @@ def Calc():
     number=False
     symbol=False
     pas=ent1.get()
-    sym_upp=False
     for i in pas:
+        sym_upp=False
         for j in symbols:
             if i==j:
                 if symbol==False:
