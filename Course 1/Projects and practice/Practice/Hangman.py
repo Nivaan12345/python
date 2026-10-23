@@ -51,6 +51,7 @@ lives=7
 while True:
     if lives==0:
         print("You have no lives left")
+        print("The answer was",hangman)
         break
     y=input("Enter the letter(including a space) ")
 

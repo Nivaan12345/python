@@ -7,5 +7,5 @@ y=0
 for i in x:
     y=y+i
 z=y/n
-print("The mean of your numbers is",z)
+print("The mean of your numbers is",round(z,2))
 #end
