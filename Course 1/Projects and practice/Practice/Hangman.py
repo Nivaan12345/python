@@ -20,7 +20,7 @@ elif category==2:
        "Karikala Chola","Krishnadevaraya","Harihara I","Bukka Raya I","Devaraya II","Prithviraj Chauhan","Vigraharaja IV","Rana Kumbha","Rana Sanga",
        "Maharana Pratap","Udai Singh II","Rana Amar Singh I","Shivaji Maharaj","Sambhaji Maharaj","Rajaram Maharaj","Shahu Maharaj","Balaji Vishwanath",
        "Baji Rao I","Balaji Baji Rao","Madhavrao I","Raghuji Bhonsle","Ahilyabai Holkar","Malhar Rao Holkar","Ranjit Singh","Kharak Singh","Duleep Singh",
-       "Anangpal Tomar","Qutb-ud-din Aibak","Iltutmish","Razia Sultan","Ghiyas-ud-din Balban","Alauddin Khilji","Muhammad bin Tughlaq","Firoz Shah Tughlaq"
+       "Anangpal Tomar","Qutbuddin Aibak","Iltutmish","Razia Sultan","Ghiyasuddin Balban","Alauddin Khilji","Muhammad bin Tughlaq","Firoz Shah Tughlaq"
        ,"Sikandar Lodi","Ibrahim Lodi","Babur","Humayun","Akbar","Jahangir","Shah Jahan","Aurangzeb","Bahadur Shah I",
        "Muhammad Shah","Bahadur Shah Zafar","Sher Shah Suri","Islam Shah Suri","Hemu Vikramaditya","Krishna Deva Raya","Tipu Sultan","Hyder Ali","Krishnaraja Wodeyar III",
        "Chikka Devaraja Wodeyar","Serfoji II","Shahaji Bhonsle","Lachit Borphukan","Rudrama Devi","Ganapati Deva",
@@ -38,32 +38,29 @@ elif category==3:
        "Eoin Morgan","Jofra Archer","Jos Buttler","Saeed Anwar","Inzamam-ul-Haq","Shoaib Akhtar","Younis Khan","Misbah-ul-Haq","Mohammad Hafeez"]
 else:
     print("Error please choose a number between 1 and 3")
+    exit()
 
 
 import random
-hangman=random.choice(x)
-hangman.lower()
+hangman=(random.choice(x)).lower()
 answer=[]
 temp=""
 for i in range(len(hangman)):
-    answer.append("-")
+    answer.append("-" if hangman[i].isalpha() else hangman[i])
 lives=7
 while True:
     if lives==0:
         print("You have no lives left")
         print("The answer was",hangman)
         break
-    y=input("Enter the letter(including a space) ")
+    y=input("Enter the letter ").lower()
 
     if y in hangman:
-        while y in hangman:
-            f=int(hangman.index(y))
-            print(f"the letter {y} is in the answer")
-            answer[f]=y
-            for i in range(len(hangman)):
-                temp=temp+answer[i]
-            print(temp)
-            hangman=hangman[:f] + hangman[f+1:]
+        print(f"the letter {y} is in the answer")
+        for f, letter in enumerate(hangman):
+            if letter == y:
+                answer[f] = letter
+        print("".join(answer))
     else:
         print("The letter",y,"is not in the answer")
         lives=lives-1
@@ -71,4 +68,4 @@ while True:
         if answer==hangman:
             print("--------congratulations------------")
             print("You have won\nThe answer was",answer)
-#INCOMPLETE
+#END
