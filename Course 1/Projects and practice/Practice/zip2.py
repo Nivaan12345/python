@@ -10,3 +10,4 @@ stocks=['reliance','tata','infosys','TCS']
 prices=[200,186,234,209]
 stockprices=zip(stocks,prices)
 print(dict(stockprices))
+print(res)
